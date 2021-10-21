@@ -17,7 +17,7 @@ pipeline {
      stage('Build JAR') {
         steps {
           //build the JAR file by using command
-          sh './gradlew build'
+          sh '{JENKINS_HOME} ./gradlew build'
         }
     }
     stage('Build') {

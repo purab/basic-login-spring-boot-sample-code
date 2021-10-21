@@ -63,4 +63,5 @@ java -jar /mnt/c/NON-INSTALLED-SOFTWARES/jenkins.war --httpPort=9090
 go to http://localhost:9090/pluginManager/ for installing docker related plugins
 Docker, Docker Pipeline,docker-build-step,CloudBees Docker Build and Publish
 
-//Note: use Multibranch pipeline and just put your git repo url
+//Note: use Multibranch pipeline and just put your git repo url.
+Do variable changes and you can use jenkins build with docker image push..
