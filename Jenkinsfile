@@ -9,7 +9,7 @@ pipeline {
   stages {
       stage('Build JAR') {
         steps {
-          gradlew build
+          gradlew('build')
         }
       }
     stage('Build') {
