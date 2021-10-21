@@ -4,6 +4,7 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   environment {
+   APP_NAME = "basic-login"
    //Note: use Multibranch pipeline and just put your git repo url
     // Put your credentails jenkins - http://localhost:9090/credentials/ - id=dockerhub-cred
     DOCKERHUB_CREDENTIALS = credentials('dockerhub-cred')
@@ -23,7 +24,7 @@ pipeline {
     stage('Build') {
       steps {
         //using Build number Jenkins environment variable
-        sh 'docker build -t purabdk/basic-login:${BUILD_NUMBER} .'
+        sh 'docker build -t purabdk/${APP_NAME}:${BUILD_NUMBER} .'
       }
     }
     stage('Login') {
@@ -35,7 +36,7 @@ pipeline {
     stage('Push') {
       steps {
         //push image to docker hub
-        sh 'docker push purabdk/basic-login:${BUILD_NUMBER}'
+        sh 'docker push purabdk/${APP_NAME}:${BUILD_NUMBER}'
       }
     }
   }
