@@ -7,14 +7,6 @@ pipeline {
     DOCKERHUB_CREDENTIALS = credentials('purabdk-dockerhub')
   }
   stages {
-     stage('Cloning Git') {
-        steps {
-            checkout([$class: 'GitSCM', branches: [[name: '*/master']],
-             doGenerateSubmoduleConfigurations: false,
-              extensions: [], submoduleCfg: [],
-              userRemoteConfigs: [[credentialsId: '',
-              url: 'https://github.com/purab/basic-login-spring-boot-sample-code']]])
-        }
     stage('Build') {
       steps {
         sh 'docker build -t purabdk/basic-login:latest .'
