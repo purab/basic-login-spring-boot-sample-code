@@ -57,8 +57,10 @@ Start jenkins on local machine
 
 ```
 wsl
-java -jar /mnt/c/NON-INSTALLED-SOFTWARES/jenkins.war --httpPort=8090
+java -jar /mnt/c/NON-INSTALLED-SOFTWARES/jenkins.war --httpPort=9090
 ```
 
 go to http://localhost:9090/pluginManager/ for installing docker related plugins
 Docker, Docker Pipeline,docker-build-step,CloudBees Docker Build and Publish
+
+//Note: use Multibranch pipeline and just put your git repo url
