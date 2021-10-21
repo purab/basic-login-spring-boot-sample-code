@@ -48,10 +48,11 @@ stop running container
 #docker stop CONTAINER_ID
 ```
 
---------Jenkins-------------------
+# Jenkins
 Ref:
-https://www.jenkins.io/download/
-https://www.jenkins.io/doc/book/installing/initial-settings/
+[Jenkins War Download](https://www.jenkins.io/download/)
+[Jenkins Doc](https://www.jenkins.io/doc/book/installing/initial-settings/)
+
 
 Start jenkins on local machine
 
